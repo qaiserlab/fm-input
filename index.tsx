@@ -17,13 +17,13 @@ interface Values {
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('First Name Required'),
+    .min(2, 'First Name is too short!')
+    .max(50, 'Last Name is too long!')
+    .required('First Name is Required'),
   lastName: Yup.string(),
   email: Yup.string()
     .email('Invalid Email')
-    .required('Email Required'),
+    .required('Email is Required'),
 });
 
 function App() {
