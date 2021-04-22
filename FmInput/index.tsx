@@ -2,13 +2,9 @@ import React from 'react';
 import { useField } from 'formik';
 import InputProps from 'antd/lib/input';
 import { Input } from 'antd';
+import { PropsInterface } from './schema'
 
-export interface FmInputProps extends InputProps {
-  name: string;
-  label?: string;
-}
-
-export default function FmInput(props: FmInputProps) {
+export default function FmInput(props: PropsInterface) {
   const [field, meta] = useField(props as any);
 
   return (
